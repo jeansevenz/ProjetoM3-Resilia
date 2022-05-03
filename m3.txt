@@ -1,0 +1,35 @@
+INSERT INTO cliente(cpf, nome, email, desconto, genero)
+VALUES(98765432112, 'Rafael Silva', 'spinolaseven@gmail.com', 1, 'M' ),
+(09353628192, 'Valeu Natalina', 'natalina.v@gmail.com', 0, 'F' ),
+(74920270192, 'Eren Yaeger', 'sasageyo@gmail.com', 1, 'NB' ),
+(84645292020, 'Mikasa Ackerman', 'mikasaack@gmail.com', 1, 'F' ),
+(64529920373, 'Freeza estounervoso', 'freezastv@gmail.com', 0, 'F' ),
+(43729274530, 'Naruto Uzumaki', 'narutouzu@gmail.com', 1, 'M' ),
+(75463830293, 'Barry Allen', 'speedbarry@gmail.com', 1, 'M' );
+INSERT INTO pedido(quantidade, data_pedido)
+VALUES(20,'2022-05-07'),
+(12, '2022-05-05'),
+(25, '2022-05-09'),
+(20, '2022-05-30'),
+(15, '2022-07-11'),
+(05, '2022-12-18'),
+(02, '2022-07-11'),
+(25, '2022-06-09');
+DELETE FROM pedido where idPedido= 08;
+
+INSERT INTO cliente_has_pedido(cliente_cpf, pedido_idPedido)
+VALUES(98765432112, 01),
+(09353628192, 02),
+(74920270192, 03),
+(84645292020, 04),
+(64529920373, 05),
+(43729274530, 06),
+(75463830293, 07);
+INSERT INTO produto(nome, valor, validade, pedido_idPedido)
+VALUES('tenis', 50, null, 01),
+('prancha de surf', 90, null, 02),
+('bola de basquete', 60, null, 03),
+('skate', 99, null, 04),
+('bicicleta', 98, null, 05),
+('patins', 79, null, 06),
+('Whey Protein', 99,'2024-01-01', 07);
